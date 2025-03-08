@@ -587,15 +587,15 @@ const chatglmModels = [
 
 let seq = 1000; // 内置的模型序号生成器从1000开始
 export const DEFAULT_MODELS = [
-   ...openaiModels.map((name) => ({
+   ...baiduModels.map((name) => ({
      name,
      available: true,
-     sorted: seq++, // Global sequence sort(index)
+     sorted: seq++,
      provider: {
-       id: "openai",
-       providerName: "OpenAI",
-       providerType: "openai",
-       sorted: 1, // 这里是固定的，确保顺序与之前内置的版本一致
+       id: "baidu",
+       providerName: "Baidu",
+       providerType: "baidu",
+       sorted: 1,
      },
    })),
  ] as const;
